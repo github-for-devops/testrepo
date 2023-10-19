@@ -6,7 +6,7 @@ files:
 file_exists_behavior: OVERWRITE
 hooks:
  BeforeInstall:
-  - location: /before.sh
+  - location: ./before.sh
     timeout: 300
     runas: root
   ApplicationStop:
