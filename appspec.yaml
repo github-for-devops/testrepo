@@ -1,15 +1,15 @@
 version: 0.0
 os: linux
 files:
-  - source: ./index.html
+  - source: /index.html
     destination: /var/www/html/
-file_exists_behavior: OVERWRITE
+    file_exists_behavior: OVERWRITE
 hooks:
  BeforeInstall:
-  - location: ./before.sh
+  - location: /before.sh
     timeout: 300
     runas: root
   ApplicationStop:
-    - location: ./stop.sh
+    - location: /stop.sh
       timeout: 300
       runas: root
