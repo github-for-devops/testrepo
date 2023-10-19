@@ -3,13 +3,12 @@ os: linux
 files:
   - source: /index.html
     destination: /var/www/html/
-    file_exists_behavior: OVERWRITE
-hooks:
- BeforeInstall:
+file_exists_behavior: OVERWRITE
+BeforeInstall:
   - location: /before.sh
     timeout: 300
     runas: root
-  ApplicationStop:
-    - location: /stop.sh
-      timeout: 300
-      runas: root
+ApplicationStop:
+  - location: /stop.sh
+    timeout: 300
+    runas: root
