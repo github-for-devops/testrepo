@@ -5,10 +5,10 @@ files:
     destination: /var/www/html/
 file_exists_behavior: OVERWRITE
 BeforeInstall:
-  - location: /before.sh
+  - location: scripts/before.sh
     timeout: 300
     runas: root
 ApplicationStop:
-  - location: /stop.sh
+  - location: scripts/stop.sh
     timeout: 300
     runas: root
